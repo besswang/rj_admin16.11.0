@@ -1,5 +1,13 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +18,311 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: -webkit-box;
+  /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box;
+  /* Firefox 17- */
+  display: -webkit-flex;
+  /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex;
+  /* Firefox 18+ */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: flex;
+  /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+
+/*伸缩流方向*/
+.flex-direction_column {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-direction_row {
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+/*主轴对齐*/
+.justify-content_flex-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* flex-折行 */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content_flex-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.justify-content_flex-justify {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/*侧轴对齐*/
+.align-items_flex-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.align-items_flex-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.align-items_center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.align-items_baseline {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+}
+
+/*伸缩性*/
+.flex_auto {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  -webkit-flex: auto;
+  flex: auto;
+}
+
+.flex_1 {
+  width: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.margin_auto {
+  margin: 0 auto;
+}
+
+.margin-bottom15 {
+  margin-bottom: 15px
+}
+
+.margin_top15 {
+  margin-top: 15px;
+}
+
+.margin_left15 {
+  margin-left: 15px;
+}
+
+.margin_right10 {
+  margin-right: 10px;
+}
+
+.pb15 {
+  padding-bottom: 15px;
+}
+
+.ptb5 {
+  padding: .3125rem 0;
+}
+
+.bgc1 {
+  background-color: #F0F2F5
+}
+
+.pagination-con {
+  padding-top: 15px;
+}
+
+.borderb1 {
+  border-bottom: .0625rem solid #fff;
+}
+
+.red {
+  color: red
+}
+
+.green {
+  color: green
+}
+
+.g-border {
+  color: #6bc63b;
+  border: 1px solid #d1ebc4;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background: #ecf5e7;
+}
+
+.r-border {
+  color: #f3676c;
+  border: 1px solid #fcd4d6;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background: #faebec;
+}
+
+.channeltitle {
+  font-size: 16px;
+  font-weight: normal;
+  background: #EFF2F7;
+  padding: 10px 15px;
+  border-left: 4px solid #4db3ff;
+  margin-bottom: 15px;
+}
+
+.my-upload {
+  text-align: center;
+  display: inline-block;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.upload-input {
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: transparent;
+  opacity: 0;
+  filter: Alpha(opacity=0);
+}
+
+.my-upload .avatar {
+  max-width: 100%;
+}
+
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.el-message {
+  z-index: 1026
+}
+
+.table-img-con {
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.table-img-con .table-img {
+  display: block;
+  height: 60px;
+  margin: 0px auto;
+}
+
+.el-table__body {
+  /* 使表格兼容safari，不错位 */
+  width: 100%;
+  table-layout: fixed !important;
+}
+
+.dis-red {
+  color: #d82137;
+}
+
+.theme-blue {
+  color: #247cfb;
+}
+
+.theme-green {
+  color: #25b97d
+}
+
+.def-color {
+  color: #8391a5
+}
+
+.info-text {
+  color: #8391a5;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.plr10 {
+  padding: 0 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.el-table th.center {
+  text-align: center;
 }

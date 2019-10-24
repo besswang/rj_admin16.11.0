@@ -1,0 +1,40 @@
+.header{
+  padding:0 15px;
+  background-color:#247cfb;
+}
+.container {
+  height:calc(100vh - 50px);
+  .sidebar{
+    background-color: #324157;
+    overflow-y: auto
+  }
+  .main{
+    height:100%;
+    width:calc(100% - 230px);
+    overflow:auto;
+    .content{
+      padding:20px 20px 66px 20px;
+    }
+  }
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 14.375rem;
+  z-index: 1000;
+  height: 45px;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #999;
+  :first-child {
+    padding-left: 15px;
+  }
+  li {
+    padding-right: 15px;
+    font-size: 14px;
+    line-height: 45px;
+    text-shadow: 1px 1px 1px #F2F2F2;
+    color: #666;
+    white-space: nowrap;
+  }
+}

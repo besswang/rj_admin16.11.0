@@ -1,0 +1,34 @@
+.tab-ul {
+  position: relative;
+  transition: transform .3s;
+  float: left;
+  .tab-li {
+    padding: 0 1rem;
+    height: 42px;
+    line-height: 42px;
+    list-style: none;
+    font-size: 14px;
+    color: #8391a5;
+    position: relative;
+    border: 1px solid transparent;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+
+    &.active {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    &.active.closable {
+      border: 1px solid #d1dbe5;
+      border-bottom-color: #fff;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .el-icon-close {
+      &::before {
+        transform: scale(.7, .7);
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.section{
+  margin-bottom:20px;
+  width:calc(100% - 50px);
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .sec-bg{
+    text-align: center;
+    border-radius: 4px;
+    color:#fff;
+    margin-bottom:15px;
+    -moz-box-shadow:2px 2px 5px #d4d3d4;
+    -webkit-box-shadow:2px 2px 5px #d4d3d4;
+    box-shadow:2px 2px 5px #d4d3d4;
+    .icon{
+      font-size:54px;
+      padding:20px;
+    }
+    .money{
+      font-size:30px;
+      font-weight: bold;
+    }
+    .info{
+      font-weight:bold;
+      padding:0 15px;
+      padding-top:5px;
+    }
+  }
+  .sec-bg1{
+    background-image: url('../images/wel1.jpg');
+  }
+  .sec-bg2 {
+    background-image: url('../images/wel2.jpg');
+  }
+  .sec-bg3 {
+    background-image: url('../images/wel3.jpg');
+  }
+  .sec-bg4 {
+    background-image: url('../images/wel4.jpg');
+  }
+  .wel-ul {
+    width: 100%;
+    li:not(:last-child){
+      margin-right:15px;
+    }
+    li {
+      padding: 10px 20px;
+      width: 0;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      text-align: center;
+      .sta-left{
+        width: 66px;
+        height:66px;
+        .icon {
+          display: block;
+          line-height:66px;
+          color:#fff;
+          font-size:30px;
+        }
+      }
+      .sta-right{
+        border:1px solid #e8ebf3;
+        border-radius: 3px;
+        border-left:0;
+        p {
+          white-space: nowrap;
+          color: #999;
+          font-size: 11px;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .clearfix{
+    color:#333;
+  }
+  .card-row{
+    .el-col{
+      margin-bottom:15px;
+      // &:nth-child(odd) .card-body li{
+      //   padding:1.682rem 0;
+      // }
+      // &:nth-child(even) .card-body li {
+      //   padding: 10px 0;
+      // }
+      &:nth-child(even) .card-body {
+        height:342px;
+      }
+      &:nth-child(odd) .card-body {
+        height:342px;
+      }
+    }
+  }
+  .card-row2{
+    .el-col{
+      li{
+        padding:12px 0;
+      }
+      margin-bottom:15px;
+    }
+  }
+  .card-body{
+    li{
+      &:nth-child(even) h1{
+        color:#f05844;
+      }
+      &:nth-child(odd) h1 {
+        color: #69d972;
+      }
+      width:50%;
+      text-align: center;
+      p{
+        color:#333;
+      }
+    }
+  }
+}
+

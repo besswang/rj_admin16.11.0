@@ -1,0 +1,19 @@
+{
+  "code": "SUCCESS",
+  "data": {
+    "id": 1,
+    "gmt": 1560243014000,
+    "upt": 1560243014000,
+    "version": 0,
+    "adminName": "admin",
+    "password": "a0b40a843c75e13fd8604989c3cc8fd7",
+    "roleId": 1,
+    "adminState": 0,
+    "distribution": 0,
+    "superState": 1,
+    "vcode": "string",
+    "nickName": "string"
+  },
+  "msg": "登陆成功",
+  "success": true
+}
