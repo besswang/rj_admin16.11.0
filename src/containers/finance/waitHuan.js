@@ -163,6 +163,10 @@ class WaitHuan extends Component {
 							return row.phone.replace(/^(\d{3})\d{4}(\d+)/, '$1****$2')
 						}
 					}
+				}, {
+					label: '支付宝认证账号',
+					prop: 'alipayNum',
+					width: 200
 				},
 				// {
 				// 	label: '新老客户',

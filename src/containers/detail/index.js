@@ -182,7 +182,7 @@ class Detail extends Component{
         this.props.selectUserSms({userId:userId})
         break
       case '9': // 报告
-        this.props.selectPresentationByUserId({userId:userId})
+        // this.props.selectPresentationByUserId({userId:userId})
         break
       case '10': // 手机设备
         this.selectLoginDate({userId:userId})

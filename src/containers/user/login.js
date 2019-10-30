@@ -202,7 +202,7 @@ class Login extends Component {
           <Layout.Col span="7" className="grid-content grid-left flex flex-direction_column justify-content_flex-justify">
             <div className="top-title">
               <h1 className="en-wel"><span className="border-bottom4">{'W'}</span>{'elcome'}</h1>
-              <h1 className="wel">{'牛肉干'}</h1>
+              <h1 className="wel">{'点金手'}</h1>
               {/* 及享用  小赢花花 梦想借 pizza,牛肉干，加油站,百花果*/}
             </div>
             <ul className="flex flex-direction_row justify-content_flex-justify bottom-title">

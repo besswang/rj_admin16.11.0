@@ -471,10 +471,28 @@ export const ADDRESS = [{
       }
     }, {
   label: '姓名',
-  prop: 'contact_name'
+  prop: 'contact_name',
+  render: row => {
+    if (row.contact_name) {
+      const reg = row.contact_name.slice(1)
+      const s = reg.split('')
+      const x = []
+      for (let i = 0; i < s.length; i++) {
+        x.push('*')
+      }
+      const z = x.join('')
+      const y = row.contact_name.substring(1, 0)
+      return y + z
+    }
+  }
 }, {
   label: '电话',
-  prop: 'contact_phone'
+  prop: 'contact_phone',
+  render: row => {
+    if (row.contact_phone) {
+      return row.contact_phone.replace(/^(\d{3})\d{4}(\d+)/, '$1****$2')
+    }
+  }
 }, {
   label: '通话次数',
   prop: 'conversation_number'

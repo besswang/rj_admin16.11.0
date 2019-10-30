@@ -72,7 +72,7 @@ class Home extends Component {
 				</ul>
 				<ul className="footer flex flex-direction_row">
 					<li>{ '©2019' }</li>
-					<li>{'系统名称 牛肉干后台管理系统'}</li>
+					<li>{'系统名称 点金手后台管理系统'}</li>
 					<li>{'消费环境开启状态'}</li>
 					<li>{'总充值'}{recharge}{'¥'}</li>
 					<li>{'已消费'}{consume}{'¥'}</li>

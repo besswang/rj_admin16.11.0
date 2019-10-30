@@ -254,12 +254,12 @@ class Audit extends Component{
 					<Dialog.Footer className="dialog-footer">
 						<Button className="margin_right10" onClick={ () => this.setState({ dialogVisible: false }) }>{'取 消'}</Button>
 						<Button className="margin_right10" type="danger"
-							onClick={ this.handelAudit.bind(this,FALSE) }
+							onClick={ this.handelAudit.bind(this,FALSE,null) }
 						>
 							{'拒绝'}
 						</Button>
 						<Button className="margin_right10" type="success"
-								onClick={ this.handelAudit.bind(this,PENDING_LOAN) }
+								onClick={ this.handelAudit.bind(this,PENDING_LOAN,null) }
 						>
 								{'通过'}
 						</Button>
