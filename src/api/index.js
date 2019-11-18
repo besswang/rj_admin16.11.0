@@ -109,7 +109,7 @@ export default {
   selectAreasByIdApi: params => Fetch(jk.selectAreasById, {method: 'get', data: params}),
   updateAreaStateApi: params => Fetch(jk.updateAreaState, {method: 'post', body: params}),
   toLoanApi: params => Fetch(jk.toLoan, {method: 'get', data: params}),
-  toLoanBankApi: params => Fetch(jk.toLoanBank, {method: 'put', body: params}),
+  toLoanBankApi: params => Fetch(jk.toLoanBank, {method: 'get', data: params}),
   selectUnAllowableAreaApi: params => Fetch(jk.selectUnAllowableArea, {method: 'post', body:params}),
   updateNextApplyTimeApi: params => Fetch(jk.updateNextApplyTime, {method: 'get', data: params}),
   findAllLiftingAmountApi: params => Fetch(jk.findAllLiftingAmount, {method: 'post', body:params}),

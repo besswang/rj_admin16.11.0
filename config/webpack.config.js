@@ -79,9 +79,10 @@ module.exports = function(webpackEnv) {
   const publicUrl = isEnvProduction
     ? publicPath.slice(0, -1)
     // : isEnvDevelopment && ''
+    //: isEnvDevelopment && 'http://192.168.0.103:8080'
     //: isEnvDevelopment && 'http://47.111.93.109:8082'
     //: isEnvDevelopment && 'http://47.111.93.109:8083'
-    : isEnvDevelopment && 'https://goladhandadmht.imxiaomang.com.cn'
+     : isEnvDevelopment && 'https://goladhandadmht.imxiaomang.com.cn'
     //: isEnvDevelopment && 'https://tgjycbbzqutorlj.zhengxingmeirong.net.cn'
     //: isEnvDevelopment && 'http://47.94.142.215:8081'
     // : isEnvDevelopment && 'http://localhost:8081'

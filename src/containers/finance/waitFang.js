@@ -1,6 +1,6 @@
 // 催收管理-个人对账
 import React, { Component } from 'react'
-import { Button, Loading, Table, Dialog, Radio, Form, MessageBox } from 'element-react'
+import { Button, Loading, Table, Dialog, Radio, Form, MessageBox,Message, Select } from 'element-react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -10,6 +10,7 @@ import Search from '@components/Search'
 import MyPagination from '@components/MyPagination'
 import filter from '@global/filter'
 import { FALSE } from '@meta/state'
+import { PAY_TYPE } from '@meta/select'
 import DetailBtn from '@components/DetailBtn'
 import { dwaitFang } from '@meta/details'
 import timeDate from '@global/timeDate'
@@ -29,6 +30,7 @@ class WaitFang extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			payType:null,
 			obj:{},
 			loanType: 1,
 			dialogVisible: false,
@@ -207,20 +209,32 @@ class WaitFang extends Component {
 			this.setState({
 				dialogVisible: true,
 				loanType: 1,
-				obj: r
+				obj: r,
+				payType:null
 			})
 		}
 	}
-	onChange = v => {
+	onChange = (k,v) => {
 		this.setState({
-			loanType: v
+			[k]: v
 		})
 	}
 	saveContent = e => {
 		e.preventDefault()
-		const id = this.state.obj.id
-		if(this.state.loanType === 0) { // 银行卡
-			this.props.toLoanBank(id)
+		const { payType,loanType, obj } = this.state
+		const id = obj.id
+		const admin = JSON.parse(window.sessionStorage.getItem('adminInfo'))
+		console.log(payType, loanType)
+		if(loanType === 0) { // 银行卡
+			if (!payType){
+				Message({
+					message: '请选择支付方式',
+					type: 'warning'
+				})
+				return false
+			}
+			const trans = Object.assign({},{id:id},{adminId:admin.id},{payType:payType},{payeeAccount:obj.alipayNum},{accountBankName:obj.bankNumber})
+			this.props.toLoanBank(trans)
 		}else{
 			this.props.toLoan(id)
 		}
@@ -287,11 +301,23 @@ class WaitFang extends Component {
 						</ul>
 						<Form labelWidth="80">
 							<Form.Item label="放款方式:">
-								<Radio.Group value={ loanType } onChange={ this.onChange.bind(this) }>
-									{/* <Radio value={ 0 }>{'银行卡'}</Radio> */}
+								<Radio.Group value={ loanType } onChange={ this.onChange.bind(this,'loanType') }>
 									<Radio value={ 1 }>{'线下放款'}</Radio>
+									<Radio value={ 0 }>{'银行卡放款'}</Radio>
 								</Radio.Group>
 							</Form.Item>
+							{
+								loanType === 0 &&
+								<Form.Item label="支付方式:">
+									<Select value={ this.state.payType } placeholder="请选择" onChange={ this.onChange.bind(this,'payType') }>
+										{
+											PAY_TYPE.map(el => {
+												return <Select.Option key={ el.value } label={ el.label } value={ el.value } />
+											})
+										}
+									</Select>
+								</Form.Item>
+ 							}
 						</Form>
 					</Dialog.Body>
 					<Dialog.Footer className="dialog-footer">

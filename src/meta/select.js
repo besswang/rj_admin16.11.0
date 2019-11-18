@@ -122,3 +122,13 @@ export const REPAYMENT_TYPE = [{
   value: 4,
   label: '线下微信'
 }]
+export const PAY_TYPE = [{ // 支付方式
+  value: 1,
+  label: '银行卡'
+}, {
+  value: 2,
+  label: '支付宝'
+}, {
+  value: 3,
+  label: '微信'
+}]

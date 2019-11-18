@@ -3,6 +3,7 @@ const proxy = require('http-proxy-middleware')
 module.exports = function (app) {
   app.use(
     proxy('/api', {
+      //arget: 'http://192.168.0.103:8080',
       // http://47.111.93.109:8082/swagger-ui.html#/
       //target: 'http://47.111.93.109:8082',// 后台
       // target: 'http://47.111.93.109:8083', // 渠道
