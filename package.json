@@ -41,7 +41,7 @@
     "jest-watch-typeahead": "0.4.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "mathjs": "^6.2.3",
+    "mathjs": "^7.5.1",
     "mini-css-extract-plugin": "0.8.0",
     "mockjs": "^1.0.1-beta3",
     "optimize-css-assets-webpack-plugin": "5.0.3",
